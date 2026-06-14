@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS lab_monitor;
+
+USE lab_monitor;
+
+CREATE TABLE leituras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    
+    sensor VARCHAR(50) NOT NULL,
+
+    co2 FLOAT NOT NULL,
+    temperatura FLOAT NOT NULL,
+    umidade FLOAT NOT NULL,
+
+    timestamp_ms BIGINT,
+
+    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
